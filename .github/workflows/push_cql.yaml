@@ -17,3 +17,4 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: darena-solutions/meldrx-ecosystem
           event-type: updated-cql-main
+          client-payload: '{"branch_name": "main"}'
