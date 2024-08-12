@@ -10,7 +10,7 @@ on:
 env:
   REPOSITORY_OWNER: darena-solutions
   REPOSITORY_NAME: meldrx-ecosystem
-  EVENT_TYPE: external_repo_updated
+  EVENT_TYPE: updated-cql-main
 
 jobs:
   trigger:
