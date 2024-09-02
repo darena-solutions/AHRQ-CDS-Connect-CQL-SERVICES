@@ -37,6 +37,7 @@ RUN npm cache clean --force
 
 # Expose the server port
 EXPOSE 3000
+EXPOSE 80
 
 # Create a volume for the VSAC cache
 VOLUME ["/usr/src/app/.vsac_cache"]
