@@ -42,6 +42,17 @@ cardLogger.checkCardLoggingSetting().then((setting) => {
   console.error(e.message || e);
 });
 
+// reload hooks & libs every minute
+setInterval(
+  () => {
+    console.log('reloading libraries & hooks')
+    libsLoader.load(path.resolve(__dirname, '..', 'config', 'libraries'));
+    hooksLoader.load(path.resolve(__dirname, '..', 'config', 'hooks'));
+    console.log('reload complete')
+  },
+  1000 * 60
+);
+
 /**
  * Get port from environment and store in Express.
  */

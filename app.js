@@ -11,7 +11,6 @@ var cors = require('cors');
 const index = require('./routes/index');
 const apiLibrary = require('./routes/api/library');
 const cdsServices = require('./routes/cds-services');
-const admin = require('./routes/admin');
 
 // Set up a default request size limit of 1mb, but allow it to be overridden via environment
 const limit = process.env.CQL_SERVICES_MAX_REQUEST_SIZE || '1mb';
@@ -43,7 +42,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/api/library', apiLibrary);
 app.use('/cds-services', cdsServices);
-app.use('/admin', admin);
 
 // error handler
 app.use((err, req, res, next) => {
