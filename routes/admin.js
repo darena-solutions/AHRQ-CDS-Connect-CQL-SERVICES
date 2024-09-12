@@ -7,8 +7,8 @@ const path = require('path');
 router.post('/_reload', _reload);
 
 function _reload(req, res, next) {
-  hooksLoader.load(path.resolve(__dirname, '..', 'config', 'hooks'));
   libsLoader.load(path.resolve(__dirname, '..', 'config', 'libraries'));
+  hooksLoader.load(path.resolve(__dirname, '..', 'config', 'hooks'));
   res.sendStatus(200);
 }
 
